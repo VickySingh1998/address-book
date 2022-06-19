@@ -1,17 +1,13 @@
 package com.bridgelabz;
 
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AddressBookSystem {
     private static Scanner scanner = new Scanner(System.in);
-    public static void main(String[] args) {
-        System.out.println("Welcome to address book");
-        Contact contact = addContact();
-        System.out.println(contact);
-    }
+    static ArrayList<Contact> contactDetail = new ArrayList<>();
 
-    private static Contact addContact() {
+    private static ArrayList<Contact> addContact() {
         Contact contact = new Contact();
         System.out.println("Enter First name:");
         contact.setFirstName(scanner.next());
@@ -29,6 +25,12 @@ public class AddressBookSystem {
         contact.setPhoneNumber(scanner.next());
         System.out.println("Enter Email :");
         contact.setEmail(scanner.next());
-        return contact;
+
+        contactDetail.add(contact);
+        return contactDetail;
+    }
+    public static void main(String[] args) {
+        addContact();
+        System.out.println(contactDetail);
     }
 }

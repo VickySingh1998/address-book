@@ -1,8 +1,18 @@
 package com.bridgelabz;
 
 public class Contact {
+
+    private static String firstName;
+    private static String lastName;
+    private static String address;
+    private static String city;
+    private static String state;
+    private static String zip;
+    private static String phoneNumber;
+    private static String email;
     public Contact() {
     }
+
     public Contact(String firstName, String lastName, String address, String city, String state, String zip, String phoneNumber, String email) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -13,16 +23,6 @@ public class Contact {
         this.phoneNumber = phoneNumber;
         this.email = email;
     }
-
-    private String firstName;
-    private String lastName;
-    private String address;
-    private String city;
-    private String state;
-    private String zip;
-    private String phoneNumber;
-    private String email;
-
     public String getFirstName() {
         return firstName;
     }
